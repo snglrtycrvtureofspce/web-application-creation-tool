@@ -1,0 +1,32 @@
+﻿<html>
+<head>
+    
+    <script typeof="text/javascript">
+        var count=0
+        function ccolor(theObject) {
+            if (theObject.style.background != 'red') {
+                theObject.style.background = 'red'
+                count++
+                alert(count)
+            }
+            else {
+                theObject.style.background = 'white'
+                count--
+                alert(count)
+            }
+            }
+    </script>
+</head>
+<body>
+   <div id="Один" onclick="ccolor(this)">
+       sads
+       <br>
+       sads
+   </div>
+     <div id="Два" onclick="ccolor(this)">
+       sads
+       <br>
+       sads
+   </div>
+</body>
+</html>

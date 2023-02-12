@@ -1,0 +1,40 @@
+<html>
+<head>
+    <script typeof="text/javascript">
+        function func() {
+            var elem = document.getElementById('mass')
+            var sum = 0
+            
+            for (var it = 0; it < elem.children.length; it++) 
+                sum = Number(elem.children[it].innerHTML)+sum
+            var avg = sum / elem.children.length
+            alert('Среднее арифметичесткое равно '+avg)
+        }
+        function del() {
+            var elm = document.getElementById('mass')
+            elm.removeChild(elm.lastChild)
+        }
+        function add() {
+            var elm = document.getElementById('mass')
+            elm.innerHTML = elm.innerHTML + '<li>'+document.getElementById('newel').value+'</li>';
+        }
+    </script>
+</head>
+<body>
+    <ul id="mass">
+        <li>12</li>
+        <li>15</li>
+        <li>20</li>
+        <li>25</li>
+        <li>59</li>
+        <li>79</li>
+    </ul>
+    <button onclick="func()">начать</button>
+    <br />
+    <br />
+    <button onclick="add()">Добавить элемент</button><input type="number" width="100" id="newel"/>
+    <br />
+    <br />
+    <button onclick="del()">Удалить последний элемент</button>
+</body>
+</html>

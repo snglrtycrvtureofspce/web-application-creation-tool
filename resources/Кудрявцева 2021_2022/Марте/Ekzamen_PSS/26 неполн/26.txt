@@ -1,0 +1,41 @@
+<body>
+		<div class="conteiner">
+			<h4>Книги</h4>
+			<div class="box">
+				<div class="part a"><a href="#">Кино и книги</a><br/><br/><span class="weight">Обсуждение фильмов и экранизаций</div>
+				<div class="part b">147 тем<br/>4374 коментария</div>
+				<div class="part c"><a href="#">slonixxx</a><br/>
+					вчера 22:37<br/>
+					<a href="#"></a>
+				</div>
+			</div>
+		
+			<div class="box">
+				<div class="part a"><a href="#">Книги</a><br/><br/><span class="weight">Обсуждение книг</div>
+				<div class="part b">1313 тем<br/>24314 коментариев</div>
+				<div class="part c"><a href="#">bakeladykoenig</a><br/>
+					вчера 23:36<br/>
+					<a href="#"></a>
+				</div>
+			</div>
+		
+			<div class="box">
+				<div class="part a"><a href="#">Раздел советов</a><br/><br/><span class="weight">Просим и делаем советы о том, чего бы нам почитать</div>
+				<div class="part b">1563 темы<br/>20587 коментариев</div>
+				<div class="part c"><a href="#">Pan9ora</a><br/>
+					сегодня 09:43<br/>
+					<a href="#"></a>
+				</div>
+			</div>
+		
+			<div class="box">
+				<div class="part a"><a href="#">Авторы</a><br/><br/><span class="weight">Всё об авторах</div>
+				<div class="part b">160 тем<br/>2816 коментариев</div>
+				<div class="part c"><a href="#">tortila</a><br/>
+					сегодня 08:21<br/>
+					<a href="#"></a>
+				</div>
+			</div>
+		
+		</div>
+	</body>
