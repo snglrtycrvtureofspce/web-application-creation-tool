@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Задание 1</title>
+        <style> 
+        fieldset { display: inline-block; }
+        span { display: inline-block; vertical-align: top; }
+        div.field {padding-bottom: 5px;}
+        div.field label {display: block; float: left; width: 100px; height: 15px;}        
+        div.buttons  {float: right;}
+        a {text-decoration: none;}        
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+            <h1 align="center" style="color:red">Форма регистрации</h1>            
+                <div class="field">
+                    <label for="name">Имя</label>               
+                    <input type="text" id="name" name="user_name">
+                </div>
+                <div class="field">
+                    <label for="name">E-mail</label>               
+                    <input type="text" id="mail" name="user_mail">
+                </div>
+                <div class="field">
+                    <label for="name">Пароль</label>               
+                    <input type="text" id="password" name="user_password">
+                </div>
+                <div class="field">
+                    <label for="name">Повторите пароль</label>               
+                    <input type="text" id="replay" name="user_replaypassword">            
+                </div>
+                <br>
+                <div class="radiobutton">
+                    <label for="name">Пол</label>                    
+                    <input type="radio" name="sex" id="man_1" value="man">                                    
+                    <label for="size_1">мужской</label> 
+                    <input type="radio" name="sex" id="woman_2" value="woman">
+                    <label for="size_2">женский</label>
+                </div>
+                <br>
+                <div class="selecter">
+                    <span>Увлечения</span>
+                    <select choice>
+                        <option choice>компьютеры</option>
+                        <option choice>спорт</option>
+                        <option choice>игры</option>
+                        <option choice>животные</option>
+                        <option choice>манга</option>
+                        <option choice>аниме</option>
+                        <option choice>рисование</option>                        
+                    </select>
+                </div>
+                <br>
+                <div class="textarea">
+                    <span>Ваши пожелания</span>                
+                    <textarea id="msg" name="user_message"></textarea>
+                </div>
+                <br>   
+                <div class="checkbox">
+                    <label for="agree">С условиями регистрации ознакомлен</label>
+                    <input type="checkbox" id="agree" name="agree_1" value="1">                    
+                </div>
+                <br>
+                <div class="buttons">                                        
+                    <input type="button" value="Отправить" onClick='location.href="success.html"'>                                    
+                    <button type="reset">Очистить</button>
+                </div>        
+            </fieldset>
+		<br>                        
+            <fieldset>  	             
+		<a href="prim01.html">Пример 1</a>
+		<a href="prim02.html">Пример 2</a>
+		<a href="prim03.html">Пример 3</a>
+            </fieldset>
+        </form>    
+</html>
