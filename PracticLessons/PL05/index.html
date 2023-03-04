@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Красная книга Республики Беларусь</title>
+    <style>
+      body {
+        background-image: url("background-image.jpg");
+        background-size: cover;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      a:link,
+      a:visited {
+        color: white;
+        background-color: red;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10px;
+      }
+
+      a:hover,
+      a:active {
+        background-color: #0056b3;
+      }
+
+      #scrolling-text {
+        white-space: nowrap;
+        overflow: hidden;
+        animation: scrolling-text 15s linear infinite;
+      }
+
+      @keyframes scrolling-text {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Красная книга Республики Беларусь</h1>
+    </header>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="animals.html">Животные</a>
+      <a href="plants.html">Растения</a>
+    </nav>
+    <main>
+      <table>
+        <tr>
+          <th>Вид</th>
+          <th>Статус</th>
+        </tr>
+        <tr>
+          <td>Белый аист</td>
+          <td>Вид исчезающий</td>
+        </tr>
+        <tr>
+          <td>Бобр европейский</td>
+          <td>Вид исчезающий</td>
+        </tr>
+        <tr>
+          <td>Волк обыкновенный</td>
+          <td>Вид исчезающий</td>
+        </tr>
+        <tr>
+          <td>Дятел белокрылый</td>
+          <td>Критический статус</td>
+        </tr>
+        <tr>
+          <td>Европейская рысь</td>
+          <td>Критический статус</td>
+        </tr>
+        <tr>
+          <td>Карась серебристый</td>
+          <td>Вид исчезающий</td>
+        </tr>
+        <tr>
+          <td>Летучая мышь</td>
+          <td>Критический статус</td>
+        </tr>
+        <tr>
+          <td>Ржанка полевая</td>
+          <td>Вид исчезающий</td>
+        </tr>
+        <tr>
+          <td>Турницы</td>
+          <td>Вид исчезающий</td>
+        </tr>
+        <tr>
+          <td>Черный аист</td>
+          <td>Критический статус</td>
+        </tr>
+      </table>
+    </main>
+    <footer>
+      <marquee id="scrolling-text">БЕРЕГИТЕ ПРИРОДУ!</marquee>
+    </footer>
+  </body>
+</html>
