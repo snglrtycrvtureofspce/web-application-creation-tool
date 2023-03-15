@@ -1,0 +1,54 @@
+h1 {
+    color: red;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+h2 {
+    color: lightskyblue;
+    font-weight: normal;
+    width: 300px;
+    text-align: right;
+    font-style: italic;
+    font-size: 20px;
+    font-family: 'Times New Roman', serif;
+}
+h3 {
+    color: orange;
+    font-family: sans-serif;
+}
+p {
+    text-indent: 30px;
+    margin-top: 0em; /* Отступ сверху */
+    margin-bottom: 0em; /* Отступ снизу */
+    text-align: justify;
+    font-style: italic;
+    font-size: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
+    line-height: 30px;
+}
+p:first-of-type {
+    color: green;
+    font-style: normal;
+}
+p:nth-of-type(2) {
+    color: red;
+    text-align: center;
+    text-indent: 0;
+}
+table {
+    width: 400px;
+    height: 200px;
+    vertical-align: top;
+}
+th {
+    text-align: left;
+    vertical-align: middle;
+}
+td {
+    text-align: center;
+    font-weight: bold;
+}
