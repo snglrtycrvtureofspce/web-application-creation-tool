@@ -1,0 +1,23 @@
+body {
+    background-color: #E5E5E5;
+    color: black;
+}
+.layer1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.layer2 {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 300px;
+    height: 150px;
+    background-image: url('img/cat2.jpg');
+    background-size: cover;
+    background-color: white;
+    color: black;
+}
+.text-white {
+    color: white;
+}

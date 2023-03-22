@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .radius {
+        background: #ffffff;
+        border: 5px solid red;
+        padding: 15px;
+        margin-bottom: 10px;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+    <title>Задание 1</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <div style="border-radius: 0 0 0 50px" class="radius">50px;</div>
+        </td>
+        <td>
+          <div style="border-radius: 0 0 0 50px/25px" class="radius">
+            50px 25px;
+          </div>
+        </td>
+        <td>
+          <div style="border-radius: 0 0 0 50px/100px" class="radius">
+            50px 100px;
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div style="border-radius: 0 0 0 30%/30%" class="radius">
+            30% 30%;
+          </div>
+        </td>
+        <td>
+          <div style="border-radius: 0 0 0 90%/100%" class="radius">
+            90% 100%;
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
