@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+table {
+    
+    font-size: 14px;
+}
+td{
+    padding: 1px 5px;
+    text-align: center;
+    color: grey
+}
