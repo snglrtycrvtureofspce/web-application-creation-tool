@@ -21,23 +21,29 @@
 @keyframes move1 {
   0% {
     left: 0;
+    top: 420px;
   }
   50% {
-    left: 920px;
+    left: 300px;
+    top: 420px;
   }
   100% {
     left: 0;
+    top: 420px;
   }
 }
 
 @keyframes move2 {
   0% {
     right: 0;
+    top: 420px;
   }
   50% {
     right: 920px;
+    top: 420px;
   }
   100% {
     right: 0;
+    top: 420px;
   }
 }
