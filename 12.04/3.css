@@ -1,0 +1,48 @@
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  background-color: red;
+}
+@keyframes fall {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 400px;
+    top: 890px;
+  }
+  50% {
+    background-color: blue;
+    left: 600px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 1000px;
+    top: 890px;
+  }
+  100% {
+    background-color: red;
+    left: 1800px;
+    top: 200px;
+  }
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  background-color: red;
+  animation-name: fall;
+  animation-duration: 16s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
