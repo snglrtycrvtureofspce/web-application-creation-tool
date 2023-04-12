@@ -24,7 +24,7 @@
     top: 420px;
   }
   50% {
-    left: 300px;
+    left: 920px;
     top: 420px;
   }
   100% {
@@ -35,15 +35,15 @@
 
 @keyframes move2 {
   0% {
-    right: 0;
     top: 420px;
+    right: 0;
   }
   50% {
-    right: 920px;
     top: 420px;
+    right: 920px;
   }
   100% {
-    right: 0;
     top: 420px;
+    right: 0;
   }
 }
