@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Фиксированная шапка */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Футер, который не пропадает при прокрутке */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Абсолютно позиционированные блоки в центре */
+.block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.block img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Стили для примера */
+.block1 {
+    background-color: yellowgreen;
+    width: 200px;
+    height: 200px;
+}
+
+.block2 {
+    background-color: #3498db;
+    width: 250px;
+    height: 250px;
+}
+
+.block3 {
+    background-color: #e74c3c;
+    width: 150px;
+    height: 150px;
+}
