@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Регистрация</title>
+    <style>
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      body {
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      form {
+        margin: 50px auto;
+        padding: 20px;
+        width: 500px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      textarea,
+      select {
+        display: block;
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f2f2f2;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      textarea {
+        height: 100px;
+      }
+
+      button[type="submit"],
+      button[type="reset"] {
+        display: inline-block;
+        padding: 15px 60px;
+        background-color: #0066cc;
+        color: #ffffff;
+        border: none;
+        border-radius: 15px;
+        font-size: 16px;
+        line-height: 1.5;
+        cursor: pointer;
+      }
+
+      button[type="reset"] {
+        background-color: #cccccc;
+      }
+
+      button[type="submit"]:hover,
+      button[type="reset"]:hover {
+        background-color: #0050a0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="registration.html">Регистрация</a></li>
+        </ul>
+      </nav>
+    </header>
+    <form>
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="gender">Пол:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Мужской</label>
+
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Женский</label>
+
+      <label for="interests">Интересы:</label>
+      <textarea id="interests" name="interests"></textarea>
+
+      <label for="country">Страна:</label>
+      <select id="country" name="country">
+        <option value="by">Беларусь</option>
+        <option value="ru">Россия</option>
+        <option value="us">Сша</option>
+      </select>
+
+      <button type="submit">Зарегистрироваться</button>
+      <button type="reset">Отменить</button>
+    </form>
+    <footer>
+      <p>
+        Copyright © 2023
+        <a href="index.html">Главная</a>
+      </p>
+    </footer>
+  </body>
+</html>
