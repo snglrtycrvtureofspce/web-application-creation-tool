@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>DOM</title>
+    <!-- <script>
+            function summa() {
+              // объявляем переменные n1 и n2
+              var n1 = parseInt(document.Sum.number1.value);
+              var n2 = parseInt(document.Sum.number2.value);
+              /*рассчитываем сумму и записываем ее
+          в поле result*/
+              document.Sum.result.value = n1 + n2;
+            }
+            <body>
+              <form name=Sum>
+       ...
+       <input type="button" name="but"
+        value="Вычислить сумму" onClick="summa()">
+       ...
+      </form>
+
+              </body>
+    </script> -->
+  </head>
+  <body>
+    <form name="Sum">
+      Первое число <input type="text" name="number1" /><br />
+      Второе число <input type="text" name="number2" /><br />
+      <input
+        type="button"
+        name="but"
+        value="  Вычислить сумму  "
+        onClick="document.Sum.result.value= 
+       parseInt(document.Sum.number1.value)+  
+       parseInt(document.Sum.number2.value);"
+      />
+      Сумма <input type="text" name="result" />
+    </form>
+  </body>
+</html>

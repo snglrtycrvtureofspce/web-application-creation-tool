@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Лабораторная работа №5</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Задания</h1>
+
+    <h2>1. Таблица значений функции</h2>
+    <form>
+      <label for="a">Начало отрезка:</label>
+      <input type="number" id="a" name="a" required />
+      <br />
+      <label for="b">Конец отрезка:</label>
+      <input type="number" id="b" name="b" required />
+      <br />
+      <label for="h">Шаг:</label>
+      <input type="number" id="h" name="h" required />
+      <br />
+      <button type="button" onclick="calculateFunction()">Вычислить</button>
+    </form>
+    <table id="functionTable">
+      <!-- Сюда будет добавляться таблица значений функции -->
+    </table>
+
+    <h2>2. Тренировки марафонца</h2>
+    <form>
+      <label for="a1">Начальный пробег (км):</label>
+      <input type="number" id="a1" name="a1" required />
+      <br />
+      <label for="b1">Прирост тренировки (%):</label>
+      <input type="number" id="b1" name="b1" required />
+      <br />
+      <label for="c1">Общий пробег (км):</label>
+      <input type="number" id="c1" name="c1" required />
+      <br />
+      <button type="button" onclick="calculateTraining()">Вычислить</button>
+    </form>
+    <p id="trainingResult"></p>
+
+    <h2>3. Нечетные числа</h2>
+    <form>
+      <label for="a2">Начало отрезка:</label>
+      <input type="number" id="a2" name="a2" required />
+      <br />
+      <label for="b2">Конец отрезка:</label>
+      <input type="number" id="b2" name="b2" required />
+      <br />
+      <button type="button" onclick="getOddNumbers()">
+        Показать нечетные числа
+      </button>
+    </form>
+    <p id="oddNumbers"></p>
+
+    <h2>4. Двузначное число</h2>
+    <p>Куб суммы цифр числа равен квадрату самого числа. Найдите это число.</p>
+    <form>
+      <button type="button" onclick="twoDigitNumber()">
+        Найти число
+      </button>
+    </form>
+    <p id="twoDigitNumberResult"></p>
+
+    <h2>5. Палиндром</h2>
+    <form>
+      <label for="a3">Число:</label>
+      <input type="number" id="a3" name="a3" required />
+      <br />
+      <button type="button" onclick="checkPalindrome()">
+        Проверить на палиндром
+      </button>
+    </form>
+    <p id="palindromeResult"></p>
+  </body>
+</html>
