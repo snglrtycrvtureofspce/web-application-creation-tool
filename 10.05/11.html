@@ -3,6 +3,19 @@
   <head>
     <title>Задания 3-7</title>
     <style>
+      #input-field {
+        position: relative;
+        width: 400px;
+        height: 20px;
+        border: 1px solid black;
+        overflow: hidden;
+      }
+
+      #moving-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
       @keyframes moveInput {
         0% {
           transform: translateX(0);
@@ -24,14 +37,33 @@
   </head>
   <body>
     <!-- Задание 3 -->
-    <input type="text" id="movingInput" />
-    <script>
-      setInterval(moveInput, 1000);
+    <div id="input-field">
+      <input type="text" id="text-input" />
+      <span id="moving-text"></span>
+    </div>
 
-      function moveInput() {
-        var input = document.getElementById("movingInput");
-        input.style.animation = "moveInput 1s linear infinite";
+    <script>
+      var inputField = document.getElementById("input-field");
+      var movingText = document.getElementById("moving-text");
+      var textInput = document.getElementById("text-input");
+
+      var position = 0; // Начальная позиция текста
+
+      function moveText() {
+        position++; // Увеличиваем позицию текста на 1
+        movingText.style.left = position + "px"; // Устанавливаем новую позицию текста
+
+        if (position > inputField.offsetWidth) {
+          position = -movingText.offsetWidth; // Если текст вышел за пределы поля, перемещаем его в начало
+        }
       }
+
+      setInterval(moveText, 10); // Вызываем функцию moveText каждые 10 миллисекунд
+
+      textInput.addEventListener("input", function (event) {
+        var text = event.target.value; // Получаем введенный текст
+        movingText.textContent = text; // Устанавливаем текст внутри элемента movingText
+      });
     </script>
 
     <!-- Задание 4 -->

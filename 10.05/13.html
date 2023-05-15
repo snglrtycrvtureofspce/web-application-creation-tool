@@ -35,6 +35,9 @@
           alert("Введите числовые значения");
           return;
         }
+        else if (startValue > endValue) {
+          alert("Стартовое значение меньше чем конечное");
+        }
 
         // Расчет значений функции
         for (var x = startValue; x <= endValue; x += step) {
