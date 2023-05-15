@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Функция SetTimeout</title>
+    <script language="JavaScript">
+      var msg = "Бегущая строка ";
+      var id;
+      function scrollMsg() {
+        document.scrollerForm.welcomeMsg.value = msg;
+        msg = msg.substring(1, msg.length) + msg.substring(0, 1);
+        id = setTimeout("scrollMsg()", 150);
+      }
+      function stopMsg() {
+        clearTimeout(id);
+      }
+    </script>
+  </head>
+  <body ONLOAD="scrollMsg()">
+    <form name="scrollerForm">
+      <input type="text" name="welcomeMsg" value="" size="15" /><br />
+      <input
+        type="button"
+        name="go"
+        value="Пуск"
+        onClick="scrollMsg()"
+      />&nbsp;&nbsp;
+      <input type="button" name="stop" value="Стоп" onClick="stopMsg()" />
+    </form>
+  </body>
+</html>

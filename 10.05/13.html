@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Задания</title>
+    <script>
+      window.onload = function () {
+        var greeting = document.getElementById("greeting");
+        var currentTime = new Date().getHours();
+
+        if (currentTime >= 7 && currentTime < 12) {
+          greeting.textContent = "Доброе утро";
+        } else if (currentTime >= 12 && currentTime < 17) {
+          greeting.textContent = "Добрый день";
+        } else if (currentTime >= 17 && currentTime < 24) {
+          greeting.textContent = "Добрый вечер";
+        } else {
+          greeting.textContent = "Доброй ночи";
+        }
+      };
+
+      function calculateFunction() {
+        var startValue = parseFloat(
+          document.getElementById("startValue").value
+        );
+        var endValue = parseFloat(document.getElementById("endValue").value);
+        var step = parseFloat(document.getElementById("step").value);
+        var table = document.getElementById("resultTable");
+        var znach = [];
+        var func = [];
+
+        // Очистка таблицы
+        table.innerHTML = "";
+
+        if (isNaN(startValue) || isNaN(endValue) || isNaN(step)) {
+          alert("Введите числовые значения");
+          return;
+        }
+
+        // Расчет значений функции
+        for (var x = startValue; x <= endValue; x += step) {
+          var y = x * (1 - Math.cos(1 / Math.sqrt(x)));
+          znach.push(x);
+          func.push(y);
+
+          var row = document.createElement("tr");
+          var xCell = document.createElement("td");
+          var yCell = document.createElement("td");
+
+          xCell.textContent = x.toFixed(2);
+          yCell.textContent = y.toFixed(2);
+
+          row.appendChild(xCell);
+          row.appendChild(yCell);
+          table.appendChild(row);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Задание 1 -->
+    <h1 id="greeting"></h1>
+
+    <!-- Задание 2 -->
+    <form onsubmit="event.preventDefault(); calculateFunction();">
+      <label for="startValue">Начальное значение:</label>
+      <input type="text" id="startValue" />
+      <label for="endValue">Конечное значение:</label>
+      <input type="text" id="endValue" />
+      <label for="step">Шаг:</label>
+      <input type="text" id="step" />
+      <button type="submit">Рассчитать</button>
+    </form>
+
+    <!-- Задание 5 -->
+    <table id="resultTable">
+      <tr>
+        <th>x</th>
+        <th>y</th>
+      </tr>
+    </table>
+  </body>
+</html>

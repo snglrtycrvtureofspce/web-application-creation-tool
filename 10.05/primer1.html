@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Function_pr1</title>
+    <script language="JavaScript">
+      function calc() {
+        var rad = parseFloat(document.data.radius.value);
+        var s = Math.pow(rad, 2) * Math.PI;
+        document.data.result.value = s;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Расчет площади окружности</h3>
+    <form name="data">
+      Введите радиус окружности:
+      <br /><input type="text" name="radius" /><br />
+      <input
+        type="button"
+        name="but"
+        value="Рассчитать площадь"
+        onClick="calc();"
+      /><br /><br />
+      Результат: <input type="text" name="result" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Задания 3-7</title>
+    <style>
+      @keyframes moveInput {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(100px);
+        }
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Задание 3 -->
+    <input type="text" id="movingInput" />
+    <script>
+      setInterval(moveInput, 1000);
+
+      function moveInput() {
+        var input = document.getElementById("movingInput");
+        input.style.animation = "moveInput 1s linear infinite";
+      }
+    </script>
+
+    <!-- Задание 4 -->
+    <input type="text" id="clock" readonly />
+    <script>
+      setInterval(updateClock, 1000);
+
+      function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var time = hours + ":" + minutes + ":" + seconds;
+        document.getElementById("clock").value = time;
+      }
+    </script>
+
+    <!-- Задание 5 -->
+    <input type="text" id="readonlyClock" readonly />
+    <script>
+      setInterval(updateReadonlyClock, 1000);
+
+      function updateReadonlyClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var time = hours + ":" + minutes + ":" + seconds;
+        document.getElementById("readonlyClock").value = time;
+      }
+    </script>
+
+    <!-- Задание 6 -->
+    <input type="text" id="controlledClock" readonly />
+    <button onclick="stopClock()">Стоп</button>
+    <button onclick="startClock()">Пуск</button>
+    <script>
+      var clockInterval;
+
+      function startClock() {
+        clockInterval = setInterval(updateControlledClock, 1000);
+      }
+
+      function stopClock() {
+        clearInterval(clockInterval);
+      }
+
+      function updateControlledClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var time = hours + ":" + minutes + ":" + seconds;
+        document.getElementById("controlledClock").value = time;
+      }
+    </script>
+
+    <!-- Задание 7 -->
+    <input type="text" id="paramClock" readonly />
+    <button onclick="startParamClock(document.getElementById('paramClock'))">
+      Пуск
+    </button>
+    <script>
+      function startParamClock(clockInput) {
+        setInterval(function () {
+          var now = new Date();
+          var hours = now.getHours;
+          var now = new Date();
+          var hours = now.getHours();
+          var minutes = now.getMinutes();
+          var seconds = now.getSeconds();
+          var time = hours + ":" + minutes + ":" + seconds;
+          clockInput.value = time;
+        }, 1000);
+      }
+    </script>
+
+    <!-- Задание 8 -->
+    <input type="text" id="toggleClock" readonly />
+    <button onclick="toggleClock()">Старт</button>
+    <script>
+      var toggleButton = document.querySelector("button");
+      var toggleClockInterval;
+
+      toggleButton.addEventListener("click", function () {
+        if (toggleButton.textContent === "Старт") {
+          toggleClockInterval = setInterval(updateToggleClock, 1000);
+          toggleButton.textContent = "Стоп";
+        } else {
+          clearInterval(toggleClockInterval);
+          toggleButton.textContent = "Старт";
+        }
+      });
+
+      function updateToggleClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var time = hours + ":" + minutes + ":" + seconds;
+        document.getElementById("toggleClock").value = time;
+      }
+    </script>
+  </body>
+</html>
