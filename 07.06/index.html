@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Самостоятельная работа 07.06</title>
+  <style>
+    .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 10px;
+      display: inline-block;
+      background-color: bisque;
+    }
+
+    .active {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Вариант 3</h1>
+
+  <h2>Задание 1</h2>
+  <h3>Даны переменные a и b. Отнимите от a переменную b и результат присвойте переменной c. 
+  <br>Сделайте так, чтобы в любом случае в переменную c записалось положительное значение. 
+  <br>Проверьте работу скрипта при a и b, равных соответственно 3 и 5, 6 и 1.  
+  <br>(данные вводятся пользователем)</h3>
+  <label for="a">Введите значение a: </label>
+  <input type="number" id="a">
+  <br>
+  <label for="b">Введите значение b: </label>
+  <input type="number" id="b">
+  <br>
+  <button onclick="subtract()">Вычислить</button>
+  <p>Результат: <span id="c"></span></p>
+
+  <h2>Задание 2</h2>
+  <h3>Есть 5 кругов и кнопка "следующий". Один из кругов активен(отличается по цвету). 
+  <br>При клике на кнопку цвет перемещается на соседний круг, уходя с предыдущего. 
+  <br>С последнего круга цвет переходит на первый.</h3>
+  <div id="circlesContainer">
+    <div class="circle active"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  <button onclick="changeCircleColor()">Следующий</button>
+
+  <script>
+    // Задание 1
+    function subtract() {
+      var a = parseInt(document.getElementById('a').value);
+      var b = parseInt(document.getElementById('b').value);
+      var c = Math.abs(a - b);
+
+      document.getElementById('c').textContent = c;
+    }
+
+    // Задание 2
+    var circles = document.querySelectorAll('.circle');
+    var activeCircleIndex = 0;
+
+    function changeCircleColor() {
+      circles[activeCircleIndex].classList.remove('active');
+
+      if (activeCircleIndex === circles.length - 1) {
+        activeCircleIndex = 0;
+      } else {
+        activeCircleIndex++;
+      }
+
+      circles[activeCircleIndex].classList.add('active');
+    }
+  </script>
+</body>
+</html>
