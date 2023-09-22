@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Пример BOM</title>
+  <title>Лабораторная работа №15</title>
 </head>
 <body>
   <h1>Информация о размерах окна браузера и экрана</h1>
@@ -9,18 +9,15 @@
   <p id="screenInfo"></p>
 
   <script>
-    // Получаем размер окна браузера
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-    // Получаем информацию о экране
     var screenWidth = screen.width;
     var screenHeight = screen.height;
     var availScreenWidth = screen.availWidth;
     var availScreenHeight = screen.availHeight;
     var colorDepth = screen.colorDepth;
 
-    // Выводим информацию на страницу
     document.getElementById("windowSize").innerHTML = "Размер окна браузера: " + w + "x" + h;
     document.getElementById("screenInfo").innerHTML = "Информация о экране:<br>" +
       "Ширина экрана: " + screenWidth + " пикселей<br>" +

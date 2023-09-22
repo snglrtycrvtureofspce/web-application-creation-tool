@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Задания</title>
+  <title>Лабораторная работа №15</title>
 </head>
 <body>
-  <h1>Задания</h1>
+  <h1>Задание</h1>
 
-  <!-- Задание 1: Меняем текст кнопки -->
   <button id="changeTextButton">Нажми меня</button>
 
-  <!-- Задание 2: Выводим квадрат содержимого input в alert -->
+  <h1>Задание 2</h1>
   <input type="text" id="inputField" placeholder="Введите текст">
   <button id="showSquareButton">Показать квадрат</button>
 
-  <!-- Задание 3: Обмен содержимым между двумя input -->
+  <h1>Задание 3</h1>
   <input type="text" id="input1" placeholder="Input 1">
   <input type="text" id="input2" placeholder="Input 2">
   <button id="swapButton">Обменять</button>
 
   <script>
-    // Задание 1: Меняем текст кнопки
+    // Задание 1
     var changeTextButton = document.getElementById("changeTextButton");
     changeTextButton.addEventListener("click", function () {
       changeTextButton.textContent = "Текст изменен";
     });
 
-    // Задание 2: Выводим квадрат содержимого input в alert
+    // Задание 2
     var showSquareButton = document.getElementById("showSquareButton");
     showSquareButton.addEventListener("click", function () {
       var inputField = document.getElementById("inputField");
@@ -34,7 +33,7 @@
       alert("Квадрат содержимого input: " + square);
     });
 
-    // Задание 3: Обмен содержимым между двумя input
+    // Задание 3
     var swapButton = document.getElementById("swapButton");
     swapButton.addEventListener("click", function () {
       var input1 = document.getElementById("input1");
