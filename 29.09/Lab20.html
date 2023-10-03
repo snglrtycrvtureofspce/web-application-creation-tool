@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамическая анимация средствами JavaScript</title>
+    <style>
+        .animate-box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: background-color 0.5s; /* плавный переход цвета */
+        }
+    </style>
+</head>
+<body>
+    <div class="animate-box"></div>
+
+    <script>
+        const animateBox = document.querySelector('.animate-box');
+
+        // Функция для генерации случайного цвета
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function changeColorWithAnimation() {
+            const newColor = getRandomColor();
+
+            animateBox.style.backgroundColor = newColor;
+        }
+
+        animateBox.addEventListener('click', changeColorWithAnimation);
+    </script>
+</body>
+</html>
