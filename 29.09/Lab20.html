@@ -3,18 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Динамическая анимация средствами JavaScript</title>
+    <title>Лабораторная работа №20</title>
     <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .animate-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .animate-box {
             width: 100px;
             height: 100px;
             background-color: red;
-            transition: background-color 0.5s; /* плавный переход цвета */
+            transition: background-color 0.5s, transform 0.5s ease-in-out, opacity 0.5s;
+            animation: colorChangeAnimation 3s infinite alternate;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes colorChangeAnimation {
+            0% {
+                background-color: red;
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                background-color: blue;
+                transform: scale(1.2) rotate(45deg);
+                opacity: 0.7;
+            }
+            100% {
+                background-color: red;
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        .animate-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
 <body>
-    <div class="animate-box"></div>
+    <div class="animate-container">
+        <div class="animate-box"></div>
+    </div>
 
     <script>
         const animateBox = document.querySelector('.animate-box');

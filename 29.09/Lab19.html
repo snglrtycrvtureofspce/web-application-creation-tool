@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Уведомления и счетчики кнопок</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторная работа №19</title>
     <style>
-        /* Стили для кнопок */
-        button {
-            margin: 5px;
-        }
+      /* Стили для кнопок */
+      button {
+        margin: 5px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <button id="button1">Нажми меня</button>
     <button id="button2">Или меня</button>
     <button id="button3">Или даже меня</button>
@@ -23,47 +23,43 @@
     <button id="totalCounter">Общий счетчик: 0</button>
 
     <script>
-        function showNotification(message) {
-            console.log(message);
-        }
+      function showNotification(message) {
+        console.log(message);
+      }
 
-        // увеличение счетчика и обновления текста кнопки
-        function updateCounter(buttonId) {
-            const button = document.getElementById(buttonId);
-            let count = parseInt(button.textContent.split(": ")[1]);
-            count++;
-            button.textContent = buttonId + ": " + count;
-        }
+      // увеличение счетчика и обновления текста кнопки
+      function updateCounter(buttonId) {
+        const button = document.getElementById(buttonId);
+        let count = parseInt(button.textContent.split(": ")[1]);
+        count++;
+        button.textContent = buttonId + ": " + count;
+      }
 
-        document.getElementById('button1').addEventListener('click', () => {
-            showNotification('Нажата первая кнопка');
-        });
+      let totalCounter = 0;
 
-        document.getElementById('button2').addEventListener('click', () => {
-            showNotification('Нажата вторая кнопка');
-        });
+      document.getElementById("button1").addEventListener("click", () => {
+        showNotification("Нажата первая кнопка");
+        updateCounter("countButton1");
+        totalCounter++;
+        document.getElementById("totalCounter").textContent =
+          "Общий счетчик: " + totalCounter;
+      });
 
-        document.getElementById('button3').addEventListener('click', () => {
-            showNotification('Нажата третья кнопка');
-        });
+      document.getElementById("button2").addEventListener("click", () => {
+        showNotification("Нажата вторая кнопка");
+        updateCounter("countButton2");
+        totalCounter++;
+        document.getElementById("totalCounter").textContent =
+          "Общий счетчик: " + totalCounter;
+      });
 
-        document.getElementById('countButton1').addEventListener('click', () => {
-            updateCounter('countButton1');
-        });
-
-        document.getElementById('countButton2').addEventListener('click', () => {
-            updateCounter('countButton2');
-        });
-
-        document.getElementById('countButton3').addEventListener('click', () => {
-            updateCounter('countButton3');
-        });
-
-        let totalCounter = 0;
-        document.getElementById('totalCounter').addEventListener('click', () => {
-            totalCounter++;
-            document.getElementById('totalCounter').textContent = 'Общий счетчик: ' + totalCounter;
-        });
+      document.getElementById("button3").addEventListener("click", () => {
+        showNotification("Нажата третья кнопка");
+        updateCounter("countButton3");
+        totalCounter++;
+        document.getElementById("totalCounter").textContent =
+          "Общий счетчик: " + totalCounter;
+      });
     </script>
-</body>
+  </body>
 </html>
