@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function findMatches() {
+        var inputText = document.getElementById("inputText").value;
+        var result = document.getElementById("result");
+        var regex1 = /a.b/g;
+        var regex2 = /a..a/g;
+        var regex3 = /ab[a-b]a/g;
+        var regex4 = /a\.a/g;
+        var regex5 = /2\+3/g;
+        var regex6 = /2\++3/g;
+        var regex7 = /[0-9]\++[0-9]/g;
+
+        var matches1 = inputText.match(regex1);
+        var matches2 = inputText.match(regex2);
+        var matches3 = inputText.match(regex3);
+        var matches4 = inputText.match(regex4);
+        var matches5 = inputText.match(regex5);
+        var matches6 = inputText.match(regex6);
+        var matches7 = inputText.match(regex7);
+
+        result.innerHTML =
+          "1. Найденные совпадения для /a.b/g: " +
+          (matches1 ? matches1.join(", ") : "Нет совпадений") +
+          "<br>";
+        result.innerHTML +=
+          "2. Найденные совпадения для /a..a/g: " +
+          (matches2 ? matches2.join(", ") : "Нет совпадений") +
+          "<br>";
+        result.innerHTML +=
+          "3. Найденные совпадения для /ab[a-b]a/g: " +
+          (matches3 ? matches3.join(", ") : "Нет совпадений") +
+          "<br>";
+        result.innerHTML +=
+          "4. Найденные совпадения для /a\\.a/g: " +
+          (matches4 ? matches4.join(", ") : "Нет совпадений") +
+          "<br>";
+        result.innerHTML +=
+          "5. Найденные совпадения для /2\\+3/g: " +
+          (matches5 ? matches5.join(", ") : "Нет совпадений") +
+          "<br>";
+        result.innerHTML +=
+          "6. Найденные совпадения для /2\\++3/g: " +
+          (matches6 ? matches6.join(", ") : "Нет совпадений") +
+          "<br>";
+        result.innerHTML +=
+          "7. Найденные совпадения для /[0-9]\\++[0-9]/g: " +
+          (matches7 ? matches7.join(", ") : "Нет совпадений") +
+          "<br>";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Регулярные выражения</h1>
+    <textarea id="inputText" rows="5" cols="40"></textarea>
+    <button onclick="findMatches()">Найти совпадения</button>
+    <div id="result"></div>
+  </body>
+</html>

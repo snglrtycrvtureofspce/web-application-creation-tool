@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <script>
+      function updateSelectedSections() {
+        var selectedSections = [];
+        var checkboxes = document.getElementsByName("sectionCheckbox");
+
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked) {
+            selectedSections.push(checkboxes[i].value);
+          }
+        }
+
+        document.getElementById("selectedSectionsTextarea").value =
+          selectedSections.join(", ");
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Разделы студенческой газеты</h2>
+
+    <form>
+      <input
+        type="checkbox"
+        name="sectionCheckbox"
+        value="Новости"
+        onclick="updateSelectedSections()"
+      />
+      Новости<br />
+      <input
+        type="checkbox"
+        name="sectionCheckbox"
+        value="Гости"
+        onclick="updateSelectedSections()"
+      />
+      Гости<br />
+      <input
+        type="checkbox"
+        name="sectionCheckbox"
+        value="Награждения"
+        onclick="updateSelectedSections()"
+      />
+      Награждения<br />
+      <input
+        type="checkbox"
+        name="sectionCheckbox"
+        value="Образование"
+        onclick="updateSelectedSections()"
+      />
+      Образование<br />
+      <input
+        type="checkbox"
+        name="sectionCheckbox"
+        value="Досуг"
+        onclick="updateSelectedSections()"
+      />
+      Досуг<br />
+      <input
+        type="checkbox"
+        name="sectionCheckbox"
+        value="Развлечения"
+        onclick="updateSelectedSections()"
+      />
+      Развлечения<br />
+      <input
+        type="checkbox"
+        name="sectionCheckbox"
+        value="Карьера"
+        onclick="updateSelectedSections()"
+      />
+      Карьера<br />
+    </form>
+
+    <h3>Выбранные разделы:</h3>
+    <textarea
+      id="selectedSectionsTextarea"
+      rows="3"
+      cols="30"
+      readonly
+    ></textarea>
+  </body>
+</html>
