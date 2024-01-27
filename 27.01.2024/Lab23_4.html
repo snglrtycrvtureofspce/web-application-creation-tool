@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пользовательский toJSON Method пример</title>
+  </head>
+  <body>
+    <script>
+      let room = {
+        number: 23,
+        toJSON() {
+          return this.number;
+        },
+      };
+
+      let meetup = {
+        title: "Conference",
+        room,
+      };
+
+      alert(JSON.stringify(room));
+      alert(JSON.stringify(meetup));
+    </script>
+  </body>
+</html>

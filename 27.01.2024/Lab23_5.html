@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON.parse пример</title>
+  </head>
+  <body>
+    <script>
+      let numbersString = "[0, 1, 2, 3]";
+      let numbers = JSON.parse(numbersString);
+      alert(numbers[1]);
+
+      let userString =
+        '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
+      let user = JSON.parse(userString);
+      alert(user.friends[1]);
+    </script>
+  </body>
+</html>
