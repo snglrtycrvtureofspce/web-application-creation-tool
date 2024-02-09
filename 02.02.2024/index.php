@@ -11,7 +11,6 @@
   // Task 1
   $todaysdate = date("m-d-Y", time());
   echo $todaysdate;
-
   $day = "Monday";
   ?>
 
