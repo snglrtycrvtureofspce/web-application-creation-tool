@@ -7,7 +7,7 @@
 <body>
   <?php
   // Task 1
-  $products = array("Product1", "Product2", "Product3", "Product4", "Product5");
+  $products = array("Product1", "Product5", "Product3", "Product4", "Product2");
   ?>
 
   <br>
@@ -21,7 +21,6 @@
   <br>
 
   <?php
-  $products = array("Product1", "Product2", "Product3", "Product4", "Product5");
   $products[] = "Product6";
   $products[] = "Product7";
 
@@ -36,7 +35,7 @@
 
   <?php
   // Task 4
-  $products = array("Product1", "Product2", "Product3", "Product4", "Product5");
+  $products = array("Product1", "Product5", "Product3", "Product4", "Product2");
   $products[] = "Product6";
   $products[] = "Product7";
 
