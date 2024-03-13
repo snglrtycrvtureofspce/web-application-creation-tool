@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задание 2</title>
+    <style>
+      .circle {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Кликните на круги, чтобы изменить их цвет:</h2>
+    <div id="container"></div>
+    <script>
+      var circles = document.getElementsByClassName("circle");
+      var circlesCount = 5;
+      var blueCount = 0;
+      var colors = ["blue"];
+
+      function createCircle() {
+        var circle = document.createElement("div");
+        circle.className = "circle";
+        var x = Math.random() * (window.innerWidth - 100);
+        var y = Math.random() * (window.innerHeight - 100);
+        circle.style.left = x + "px";
+        circle.style.top = y + "px";
+        circle.addEventListener("click", changeColor);
+        document.getElementById("container").appendChild(circle);
+      }
+
+      function changeColor(event) {
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        event.target.style.backgroundColor = randomColor;
+
+        console.log("Цвет изменён на:", randomColor);
+
+        if (randomColor === "blue") {
+          blueCount++;
+          console.log("Количество синих:", blueCount);
+        } else {
+          blueCount = 0;
+          console.log("Количество синих сброшено");
+        }
+
+        if (blueCount === circlesCount) {
+          congratulateUser();
+          console.log("Поздравляем!");
+        }
+
+        event.target.removeEventListener("click", changeColor);
+      }
+
+      function congratulateUser() {
+        alert("Поздравляем! Вы изменили цвет всех кругов!");
+      }
+
+      for (var i = 0; i < circlesCount; i++) {
+        createCircle();
+      }
+    </script>
+  </body>
+</html>
