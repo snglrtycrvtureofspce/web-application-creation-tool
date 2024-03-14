@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>46</title>
+  </head>
+  <body>
+    <p id="paragraph">Текст абзаца</p>
+
+    <label
+      ><input type="checkbox" id="strikeCheckbox" onchange="toggleStrike()" />
+      Перечеркнуть</label
+    ><br />
+    <label
+      ><input type="checkbox" id="boldCheckbox" onchange="toggleBold()" />
+      Сделать жирным</label
+    ><br />
+    <label
+      ><input type="checkbox" id="redCheckbox" onchange="toggleRed()" /> Сделать
+      красным</label
+    ><br />
+
+    <script>
+      function toggleStrike() {
+        var paragraph = document.getElementById("paragraph");
+        var strikeCheckbox = document.getElementById("strikeCheckbox");
+        if (strikeCheckbox.checked) {
+          paragraph.style.textDecoration = "line-through";
+        } else {
+          paragraph.style.textDecoration = "none";
+        }
+      }
+
+      function toggleBold() {
+        var paragraph = document.getElementById("paragraph");
+        var boldCheckbox = document.getElementById("boldCheckbox");
+        if (boldCheckbox.checked) {
+          paragraph.style.fontWeight = "bold";
+        } else {
+          paragraph.style.fontWeight = "normal";
+        }
+      }
+
+      function toggleRed() {
+        var paragraph = document.getElementById("paragraph");
+        var redCheckbox = document.getElementById("redCheckbox");
+        if (redCheckbox.checked) {
+          paragraph.style.color = "red";
+        } else {
+          paragraph.style.color = "black";
+        }
+      }
+    </script>
+  </body>
+</html>

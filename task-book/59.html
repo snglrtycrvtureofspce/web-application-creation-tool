@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>59</title>
+    <style>
+      .rectangle {
+        width: 100px;
+        height: 50px;
+        background-color: yellow;
+        margin: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+      <div class="rectangle"></div>
+    </div>
+    <button onclick="resetPage()">Reset</button>
+
+    <script>
+      function changeRectangleProperties(rectangle) {
+        rectangle.style.backgroundColor = getRandomColor();
+        rectangle.style.height = "30px";
+      }
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      function resetPage() {
+        var rectangles = document.querySelectorAll(".rectangle");
+        rectangles.forEach(function (rectangle) {
+          rectangle.style.backgroundColor = "yellow";
+          rectangle.style.height = "50px";
+        });
+      }
+
+      var rectangles = document.querySelectorAll(".rectangle");
+      rectangles.forEach(function (rectangle) {
+        rectangle.addEventListener("click", function () {
+          changeRectangleProperties(rectangle);
+        });
+      });
+    </script>
+  </body>
+</html>

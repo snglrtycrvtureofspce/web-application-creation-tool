@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>34</title>
+  </head>
+  <body>
+    <p>Результат деления: <span id="result"></span></p>
+    <p>Количество итераций (while): <span id="iterationsWhile"></span></p>
+    <p>Количество итераций (for): <span id="iterationsFor"></span></p>
+
+    <script>
+      var num = 1000;
+      var iterationsWhile = 0;
+
+      while (num >= 50) {
+        num /= 2;
+        iterationsWhile++;
+      }
+
+      document.getElementById("result").textContent = num;
+      document.getElementById("iterationsWhile").textContent = iterationsWhile;
+
+      var iterationsFor;
+      for (iterationsFor = 0; num >= 50; iterationsFor++) {
+        num /= 2;
+      }
+
+      document.getElementById("iterationsFor").textContent = iterationsFor;
+    </script>
+  </body>
+</html>

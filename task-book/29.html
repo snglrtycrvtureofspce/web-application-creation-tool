@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>29</title>
+  </head>
+  <body>
+    <h2>Список</h2>
+    <ul id="myList">
+      <li>Пункт 1</li>
+      <li>Пункт 2</li>
+      <li>Пункт 3</li>
+    </ul>
+
+    <input type="text" id="newItemText" placeholder="Введите новый пункт" />
+    <button onclick="addItem()">Добавить</button>
+
+    <script>
+      function addItem() {
+        var input = document.getElementById("newItemText");
+        var text = input.value.trim(); // Получаем текст из поля ввода и удаляем лишние пробелы
+
+        if (text !== "") {
+          var newListElement = document.createElement("li");
+          newListElement.textContent = text;
+          document.getElementById("myList").append(newListElement);
+          input.value = "";
+        }
+      }
+    </script>
+  </body>
+</html>

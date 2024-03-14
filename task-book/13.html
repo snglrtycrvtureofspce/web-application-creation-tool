@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      div {
+        width: 500px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      code {
+        display: block;
+        width: inherit;
+        font-size: 13px;
+        background-color: #f6f5f3;
+        padding: 5px 10px;
+        letter-spacing: 0.5px;
+      }
+
+      .vars {
+        font-weight: bold;
+      }
+
+      .overflow {
+        overflow: scroll;
+        min-height: 100px;
+      }
+
+      .inline {
+        display: inline;
+      }
+
+      .grey {
+        color: #999;
+      }
+
+      .darkblue {
+        color: #0f3d7a;
+      }
+
+      .green {
+        color: #30757a;
+      }
+
+      .red {
+        color: #db282f;
+      }
+
+      .blue {
+        color: #3f83bd;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Creating a chart</h1>
+      <p>
+        To create a chart, we need to instantiate the
+        <code class="inline">Chart</code> class. To do this, we need to pass in
+        the 2d context of where we want to draw the chart. Here's an example.
+      </p>
+      <pre><code class="darkblue">&lt;canvas <span class="green">id=</span><span class="red">"myChart"</span> <span class="green">width=</span><span class="red">"400"</span> <span class="green">height=</span><span class="red">"400"</span>&gt;&lt;/canvas&gt;</code></pre>
+      <pre><code><span class="grey">// Get the context of the canvas element we want to select</span>
+<span class="vars">var</span> ctx = <span class="blue">document</span>.getElementById(<span class="red">"myChart"</span>).getContext(<span class="red">"2d"</span>);
+<span class="vars">var</span> myNewChart = <span class="vars">new</span> Chart(ctx).PolarArea(data);</code></pre>
+      <p>
+        We can also get the context of our canvas with jQuery. To do this, we
+        need to get the DOM node out of the jQuery collection, and call the
+      </p>
+      <pre><code>getContext("2d") method on that.</code></pre>
+      <pre><code class="overflow"><span class="grey">// Get context with jQuery - using jQuery's .get() method.</span>
+<span class="vars">var</span> ctx = $(<span class="red">"#myChart"</span>) .get(<span class="green">0</span>).getContext(<span class="red">"2d"</span>);
+<span class="grey">// This will get the first returned node in the jQuery collection</span>
+<span class="vars">var</span> myNewChart = <span class="vars">new</span> Chart(ctx);</code></pre>
+      <p>
+        After we've instantiated the Chart class on the canvas we want to draw
+        on, Chart.js will handle the scaling for retina displays.
+      </p>
+    </div>
+  </body>
+</html>

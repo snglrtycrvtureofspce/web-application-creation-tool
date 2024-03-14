@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>57</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <table id="myTable" border="1">
+      <tr>
+        <td>1</td>
+        <td></td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+
+    <script>
+      $(document).ready(function () {
+        var nonEmptyCells = $("td").filter(function () {
+          return $(this).text().trim() !== "";
+        });
+
+        nonEmptyCells.css("background-color", "lightgreen");
+      });
+    </script>
+  </body>
+</html>

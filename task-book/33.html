@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>33</title>
+  </head>
+  <body>
+    <input
+      type="number"
+      id="secondsInput"
+      placeholder="Введите количество секунд"
+    />
+    <button onclick="startCountdown()">Начать обратный отсчет</button>
+    <p id="countdown"></p>
+
+    <script>
+      function startCountdown() {
+        var secondsInput = document.getElementById("secondsInput");
+        var countdownElement = document.getElementById("countdown");
+        var seconds = parseInt(secondsInput.value);
+
+        if (isNaN(seconds) || seconds <= 0) {
+          countdownElement.textContent =
+            "Пожалуйста, введите положительное число секунд.";
+          return;
+        }
+
+        var interval = setInterval(function () {
+          countdownElement.textContent = seconds;
+          seconds--;
+
+          if (seconds < 0) {
+            clearInterval(interval);
+            countdownElement.textContent = "Отсчет завершен!";
+          }
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>52</title>
+  </head>
+  <body>
+    <script>
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      var numbers = [];
+      for (var i = 0; i < 10; i++) {
+        numbers.push(getRandomInt(0, 20));
+      }
+
+      var roundedNumbers = numbers.map(function (number) {
+        return Math.round(number);
+      });
+
+      var oddNumbers = roundedNumbers.filter(function (number) {
+        return number % 2 !== 0;
+      });
+      var sum = oddNumbers.reduce(function (acc, curr) {
+        return acc + curr;
+      }, 0);
+      var average = oddNumbers.length > 0 ? sum / oddNumbers.length : 0;
+
+      var result =
+        average > 10
+          ? '<span style="color: blue; border: 1px solid blue; padding: 5px;">' +
+            average +
+            "</span>"
+          : average;
+
+      alert(
+        "Последовательность: " +
+          roundedNumbers.join(", ") +
+          "\nСреднее арифметическое нечетных элементов: " +
+          result
+      );
+    </script>
+  </body>
+</html>

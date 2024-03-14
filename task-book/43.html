@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>43</title>
+  </head>
+  <body>
+    <p id="currentDay"></p>
+    <p id="otherDays"></p>
+
+    <script>
+      var week = [
+        "Воскресенье",
+        "Понедельник",
+        "Вторник",
+        "Среда",
+        "Четверг",
+        "Пятница",
+        "Суббота",
+      ];
+
+      var currentDate = new Date();
+
+      var currentDayIndex = currentDate.getDay();
+
+      document.getElementById("currentDay").innerText =
+        "Сегодня " + week[currentDayIndex];
+
+      var date1 = new Date("2010-11-11");
+      var day1Index = date1.getDay();
+      document.getElementById("otherDays").innerText =
+        "06.06.2006 был " + week[day1Index];
+
+      var birthday = new Date("2004-11-15");
+      var birthdayIndex = birthday.getDay();
+      document.getElementById("otherDays").innerText +=
+        "\nМой день рождения был " + week[birthdayIndex];
+    </script>
+  </body>
+</html>

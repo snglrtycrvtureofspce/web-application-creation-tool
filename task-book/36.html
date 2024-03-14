@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>36</title>
+  </head>
+  <body>
+    <p id="selectedValue"></p>
+
+    <input type="radio" id="option1" name="options" value="Option 1" />
+    <label for="option1">Option 1</label><br />
+
+    <input type="radio" id="option2" name="options" value="Option 2" />
+    <label for="option2">Option 2</label><br />
+
+    <input type="radio" id="option3" name="options" value="Option 3" />
+    <label for="option3">Option 3</label><br />
+
+    <input type="radio" id="option4" name="options" value="Option 4" />
+    <label for="option4">Option 4</label><br />
+
+    <script>
+      var radioButtons = document.querySelectorAll('input[type="radio"]');
+
+      var selectedValueElement = document.getElementById("selectedValue");
+
+      function handleChange(event) {
+        var selectedOption = event.target.value;
+        selectedValueElement.textContent = "Выбрано: " + selectedOption;
+      }
+
+      radioButtons.forEach(function (radioButton) {
+        radioButton.addEventListener("change", handleChange);
+      });
+    </script>
+  </body>
+</html>

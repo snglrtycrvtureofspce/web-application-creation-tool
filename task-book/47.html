@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>47</title>
+  </head>
+  <body>
+    <h2>Введите число:</h2>
+    <input type="number" id="numberInput" />
+    <button onclick="findDivisors()">Найти делители</button>
+    <p id="result"></p>
+
+    <script>
+      function findDivisors() {
+        var number = parseInt(document.getElementById("numberInput").value);
+
+        if (isNaN(number) || number <= 0) {
+          alert("Введите корректное положительное число.");
+          return;
+        }
+
+        var divisors = [];
+        for (var i = 1; i <= number; i++) {
+          if (number % i === 0) {
+            divisors.push(i);
+          }
+        }
+
+        document.getElementById("result").innerText =
+          "Делители числа " + number + ": " + divisors.join(", ");
+      }
+    </script>
+  </body>
+</html>

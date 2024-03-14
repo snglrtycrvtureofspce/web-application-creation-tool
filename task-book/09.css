@@ -1,0 +1,48 @@
+body {
+    background-image: url(https://img-fotki.yandex.ru/get/114704/138971803.0/0_1b124c_ace703a9_L.png);
+    font-family: serif;
+}
+header {
+    top: 50px;
+    margin: 0 auto;
+    width: 440px;
+    height: 440px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+#header, #footer {
+    height: 20%;
+    background-image: url(https://img-fotki.yandex.ru/get/196736/138971803.0/0_1b124d_f4e8cf64_L.png);
+    margin-top: 20px;    
+}
+#sidebar, #content {
+    height: 60%;
+    float: left;
+}
+#sidebar {
+    width: 30%;
+    background-image: url(https://img-fotki.yandex.ru/get/53638/138971803.0/0_1b124a_ec5bc995_L.png);
+}
+#content {
+    width: 70%;
+    background-image: url(https://img-fotki.yandex.ru/get/169451/138971803.0/0_1b1248_72179e6c_L.png);
+}
+#footer {
+    clear: both;
+}
+.z {
+    vertical-align: -25px;
+}
+footer {
+    padding-top: 3px;
+    text-align: center;
+    padding-left: 500px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-family: arial;
+    font-weight: 600;
+    font-size: .9em
+}

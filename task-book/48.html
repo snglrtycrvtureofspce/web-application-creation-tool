@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>48</title>
+  </head>
+  <body>
+    <h2>Количество секунд:</h2>
+    <p>В часе: <span id="hours"></span></p>
+    <p>В сутках: <span id="days"></span></p>
+    <p>В месяце: <span id="months"></span></p>
+
+    <script>
+      function secondsInHour() {
+        return 60 * 60;
+      }
+
+      function secondsInDay() {
+        return secondsInHour() * 24;
+      }
+
+      function secondsInMonth() {
+        var date = new Date();
+        var nextMonth = new Date(date.getFullYear(), date.getMonth() + 1, 1);
+        var millisecondsInMonth = nextMonth - date;
+        return millisecondsInMonth / 1000;
+      }
+
+      document.getElementById("hours").innerText = secondsInHour();
+      document.getElementById("days").innerText = secondsInDay();
+      document.getElementById("months").innerText = secondsInMonth();
+    </script>
+  </body>
+</html>

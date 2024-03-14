@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>24</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-size: 16px;
+        font-family: serif;
+      }
+      .container {
+        margin: 40px auto;
+        width: 150px;
+        padding: 5px 15px 5px 5px;
+        background-image: repeating-linear-gradient(
+          -30deg,
+          #f5f5f5,
+          #ffffff 1px,
+          #ffffff 4px
+        );
+      }
+      a {
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+        color: #fb7142;
+        text-align: right;
+        text-decoration: none;
+        background-color: #e2e2e2;
+        border-radius: 7px;
+      }
+      a::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 14px;
+        left: 20px;
+        height: 20px;
+        border-left-color: #595959;
+        border-left-width: 3px;
+        border-left-style: dotted;
+      }
+      a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 9px;
+        border-radius: 3px;
+        right: -11px;
+        width: 31px;
+        height: 31px;
+        transform: rotate(45deg) skew(10deg, 10deg);
+        background-color: transparent;
+      }
+      a:hover {
+        background-color: #595959;
+      }
+      a:hover::before {
+        border-color: #ffffff;
+      }
+      a:hover::after {
+        background-color: #595959;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <a href="#">Отправить</a>
+    </div>
+  </body>
+</html>

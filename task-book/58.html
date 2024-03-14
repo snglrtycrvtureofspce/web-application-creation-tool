@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>58</title>
+</head>
+<body>
+
+<button onclick="cloneButton()">Создать клон</button>
+
+<script>
+    function cloneButton() {
+        var originalButton = document.querySelector('button');
+        var clonedButton = originalButton.cloneNode(true);
+        clonedButton.textContent = "Клон";
+
+        clonedButton.onclick = null;
+
+        originalButton.parentNode.appendChild(clonedButton);
+    }
+</script>
+
+</body>
+</html>

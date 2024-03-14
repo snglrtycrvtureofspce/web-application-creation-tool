@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>31</title>
+  </head>
+  <body>
+    <script>
+      var numbers = [1, 2, -1, -2, 3, -3];
+
+      var newNumbers = numbers.map(function (number) {
+        return Math.abs(number);
+      });
+
+      document.write("<p>Исходный массив: [" + numbers.join(", ") + "]</p>");
+      document.write(
+        "<p>Преобразованный массив: [" + newNumbers.join(", ") + "]</p>"
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>49</title>
+  </head>
+  <body>
+    <h2>Введите границы отрезка и число X:</h2>
+    <label for="a">Начало отрезка:</label>
+    <input type="number" id="a" min="0" required /><br /><br />
+    <label for="b">Конец отрезка:</label>
+    <input type="number" id="b" min="0" required /><br /><br />
+    <label for="x">Число X:</label>
+    <input type="number" id="x" min="1" required /><br /><br />
+    <button onclick="getNumbersDivisibleByX()">Получить числа</button>
+    <p id="result"></p>
+
+    <script>
+      function getNumbersDivisibleByX() {
+        var a = parseInt(document.getElementById("a").value);
+        var b = parseInt(document.getElementById("b").value);
+        var X = parseInt(document.getElementById("x").value);
+
+        if (isNaN(a) || isNaN(b) || isNaN(X)) {
+          alert("Пожалуйста, введите корректные числа.");
+          return;
+        }
+
+        var result = [];
+        for (var i = a; i <= b; i++) {
+          if (i % X === 0) {
+            result.push(i);
+          }
+        }
+
+        if (result.length > 0) {
+          document.getElementById("result").innerText =
+            "Числа, делящиеся на " +
+            X +
+            " в отрезке от " +
+            a +
+            " до " +
+            b +
+            ": " +
+            result.join(", ");
+        } else {
+          document.getElementById("result").innerText =
+            "В заданном отрезке нет чисел, делящихся на " + X + ".";
+        }
+      }
+    </script>
+  </body>
+</html>

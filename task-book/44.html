@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>44</title>
+    <style>
+      #movingElement {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: relative;
+        transition: transform 0.5s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="movingElement"></div>
+
+    <button onclick="moveLeft()">Влево</button>
+    <button onclick="moveRight()">Вправо</button>
+
+    <script>
+      function moveLeft() {
+        var element = document.getElementById("movingElement");
+        var currentPosition =
+          parseInt(window.getComputedStyle(element).getPropertyValue("left")) ||
+          0;
+        var newPosition = currentPosition - 100;
+        element.style.left = newPosition + "px";
+      }
+
+      function moveRight() {
+        var element = document.getElementById("movingElement");
+        var currentPosition =
+          parseInt(window.getComputedStyle(element).getPropertyValue("left")) ||
+          0;
+        var newPosition = currentPosition + 100;
+        element.style.left = newPosition + "px";
+      }
+    </script>
+  </body>
+</html>

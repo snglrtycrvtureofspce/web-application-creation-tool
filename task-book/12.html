@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Lora;
+        line-height: 24px;
+      }
+
+      div {
+        width: 500px;
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 22px;
+        color: #cc1208;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-size: 18px;
+        color: #cc1208;
+      }
+
+      .soheading {
+        margin: 0;
+        font-style: italic;
+        font-size: 12px;
+      }
+
+      a {
+        color: #cc1208;
+      }
+
+      code {
+        display: block;
+        color: white;
+        background: linear-gradient(to top, #000, #333);
+        padding: 15px 10px;
+      }
+
+      h1:after {
+        position: absolute;
+        top: -6px;
+        content: "___________________";
+        color: black;
+        font-family: "Times New Roman";
+        font-weight: 400;
+        opacity: 0.3;
+        color: #cc1208;
+        padding: 10px;
+        box-sizing: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>The Path to Enlightenment</h1>
+      <p class="soheading">
+        These instructions are for *nix platforms. We also have
+        <a href="#">Windows instructions</a> .
+      </p>
+      <p>
+        You can run the tests by calling the path to path_to_enlightenment.rb
+        file.
+      </p>
+      <p>In your terminal, while in the ruby koans directory, type:</p>
+      <code>[ ruby_koans ] $ ruby path_to_enlightenment.rb</code>
+      <h2>Red, Green, Refactor</h2>
+      <p>
+        In test-driven development (TDD) the mantra has always been red: write a
+        failing test and run it, green: make the test pass, and refactor: look
+        at the code and see if you can make it any better.
+      </p>
+    </div>
+  </body>
+</html>

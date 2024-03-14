@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>45</title>
+  </head>
+  <body>
+    <button onclick="changeBackgroundColor()">Сменить цвет фона</button>
+
+    <script>
+      function changeBackgroundColor() {
+        // Генерируем случайный цвет
+        var randomColor =
+          "#" + Math.floor(Math.random() * 16777215).toString(16);
+        // Применяем его к цвету фона страницы
+        document.body.style.backgroundColor = randomColor;
+      }
+    </script>
+  </body>
+</html>

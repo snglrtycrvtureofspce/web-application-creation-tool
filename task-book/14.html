@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>14</title>
+    <style>
+      body {
+        font-size: 16px;
+        font: sans serif;
+        margin: auto 40px;
+        width: 500px;
+        line-height: 25px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+        text-align: right;
+        display: block;
+      }
+
+      .container {
+        background-color: #f2f2f2;
+        border: 1px solid #d9d9d9;
+        padding: 5px;
+        padding-right: 0;
+        font-size: 13px;
+        word-spacing: 3px;
+      }
+
+      .button {
+        background-color: #f2f2f2;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        padding: 5px;
+        font-size: 13px;
+      }
+
+      #info {
+        overflow-x: scroll;
+      }
+
+      #port {
+        color: #4dd2ff;
+      }
+
+      #url {
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="" title="задачи css"><b>www.itmathrepetitor.ru</b></a>
+    <p>Собираем проект:</p>
+    <p class="container">$ bem make</p>
+    <p>
+      Первая сборка с <span class="button">bem-tools</span> займет некоторое
+      время, так как именно в этот момент в директорию проекта устанавливаются
+      все необходимые npm-макеты.
+    </p>
+    <p>Для запуска сервера выплняем:</p>
+    <p class="container">$ bem server</p>
+    <p>В результате вы увидите следующее сообщение:</p>
+    <p class="container" id="info">
+      <nobr
+        >Info: Server is listening on port <span id="port">8080</span>. Point
+        your browser to http://<span id="url"><i>localhost.8080</i></span></nobr
+      >
+    </p>
+    <p><b>Проблема?</b></p>
+    <p>
+      Если порт 8080 уже используется другой программой, его можно переназначить
+      с помощью аргумента <span class="button">-p</span>.
+    </p>
+  </body>
+</html>

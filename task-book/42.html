@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>42</title>
+  </head>
+  <body>
+    <textarea id="outputText" rows="4" cols="50"></textarea>
+
+    <p onclick="copyText(this)">Это текст из первого абзаца.</p>
+    <p onclick="copyText(this)">Это текст из второго абзаца.</p>
+    <p onclick="copyText(this)">Это текст из третьего абзаца.</p>
+
+    <script>
+      function copyText(element) {
+        var textarea = document.getElementById("outputText");
+        textarea.value = element.textContent;
+      }
+    </script>
+  </body>
+</html>

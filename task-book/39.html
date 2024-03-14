@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>39</title>
+  </head>
+  <body>
+    <h2>
+      Трехзначные числа, где первая цифра равна сумме второй и третьей цифр
+    </h2>
+    <p id="result"></p>
+
+    <script>
+      function findNumbers() {
+        var result = [];
+        for (var i = 100; i < 1000; i++) {
+          var firstDigit = Math.floor(i / 100);
+          var secondDigit = Math.floor((i / 10) % 10);
+          var thirdDigit = i % 10;
+          if (firstDigit === secondDigit + thirdDigit) {
+            result.push(i);
+          }
+        }
+        return result;
+      }
+
+      var resultElement = document.getElementById("result");
+      var numbers = findNumbers();
+      if (numbers.length > 0) {
+        resultElement.textContent =
+          "Трехзначные числа, удовлетворяющие условию: " + numbers.join(", ");
+      } else {
+        resultElement.textContent =
+          "Трехзначных чисел, удовлетворяющих условию, не найдено.";
+      }
+    </script>
+  </body>
+</html>

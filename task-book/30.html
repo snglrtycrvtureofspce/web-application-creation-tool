@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30</title>
+  </head>
+  <body>
+    <script>
+      function printNumbers(a, b, x) {
+        var result = [];
+        for (var i = a; i <= b; i++) {
+          if (i < x) {
+            result.push(i);
+          }
+        }
+        return result;
+      }
+
+      var a = 10;
+      var b = 20;
+      var x = 15;
+
+      document.write(
+        "<p>Числа из отрезка [" +
+          a +
+          "; " +
+          b +
+          "], меньшие " +
+          x +
+          ": " +
+          printNumbers(a, b, x).join(", ") +
+          "</p>"
+      );
+    </script>
+  </body>
+</html>

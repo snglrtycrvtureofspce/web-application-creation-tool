@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>32</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="inputNumber"
+      placeholder="Введите номер элемента списка"
+    />
+    <ul id="list">
+      <li>Элемент 1</li>
+      <li>Элемент 2</li>
+      <li>Элемент 3</li>
+      <li>Элемент 4</li>
+      <li>Элемент 5</li>
+    </ul>
+
+    <script>
+      var inputNumber = document.getElementById("inputNumber");
+      var listItems = document.querySelectorAll("ul#list li");
+
+      inputNumber.addEventListener("input", function () {
+        var number = parseInt(inputNumber.value);
+
+        if (!isNaN(number) && number > 0 && number <= listItems.length) {
+          listItems[number - 1].style.backgroundColor = "lightblue";
+        } else {
+          listItems.forEach(function (item) {
+            item.style.backgroundColor = "";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

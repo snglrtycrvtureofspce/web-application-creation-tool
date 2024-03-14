@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>40</title>
+  </head>
+  <body>
+    <script>
+      var array = [];
+      for (var i = 0; i < 10; i++) {
+        array.push(Math.floor(Math.random() * 201) - 100);
+      }
+
+      var sum = 0;
+      for (var j = 0; j < array.length; j++) {
+        if (array[j] > 0) {
+          sum += array[j];
+        }
+      }
+
+      var message =
+        "Массив: " +
+        array.join(", ") +
+        "\nСумма положительных элементов: " +
+        sum;
+
+      if (sum > 100) {
+        alert(message);
+      } else {
+        var dialog = document.createElement("dialog");
+        var content = document.createTextNode(message);
+        dialog.appendChild(content);
+        document.body.appendChild(dialog);
+        dialog.showModal();
+        dialog.style.color = "purple";
+        dialog.style.border = "2px solid red";
+        dialog.style.backgroundColor = "yellow";
+        dialog.style.width = "1in";
+      }
+    </script>
+  </body>
+</html>

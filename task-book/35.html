@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>35</title>
+  </head>
+  <body>
+    <input type="checkbox" id="myCheckbox" onchange="checkCheckbox()" />
+
+    <p id="checkboxState"></p>
+
+    <script>
+      function checkCheckbox() {
+        var checkbox = document.getElementById("myCheckbox");
+        var checkboxStateElement = document.getElementById("checkboxState");
+
+        if (checkbox.checked) {
+          checkboxStateElement.textContent = "Отмечен";
+        } else {
+          checkboxStateElement.textContent = "Не отмечен";
+        }
+      }
+    </script>
+  </body>
+</html>
