@@ -51,7 +51,7 @@ if (isset($_COOKIE[$birthdayCookieName])) {
 
 <body>
     <!-- Задание 1 -->
-    <p><?php echo isset($_COOKIE['test']) ? "Content of 'test' cookie: {$_COOKIE['test']}" : "Cookie 'test' not set."; ?></p>
+    <p><?php echo isset($_COOKIE['test']) ? "Содержимое 'test' файла cookie: {$_COOKIE['test']}" : "Cookie 'test' не установлен."; ?></p>
 
     <!-- Задание 2 -->
     <p><?php echo "Cookie 'test' deleted."; ?></p>
